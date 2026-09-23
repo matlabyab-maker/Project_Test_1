@@ -1,21 +1,19 @@
 [application]
-config/name="کوهستان برفی ۱۹۴۲ - Demo 20MB"
+config/name="Snow Mountain 1942 Demo"
 run/main_scene="res://Main.tscn"
 
 [display]
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/window_width_override=1280
-window/size/window_height_override=720
+window/stretch/mode="canvas_items"
 
 [rendering]
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-textures/default_filters/use_nearest_mipmap_filter=false
 
 [input]
-throttle_up={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":87)]}
-throttle_down={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":83)]}
+speed_up={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":87)]}
+speed_down={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":83)]}
 turn_left={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":65)]}
 turn_right={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":68)]}
 pitch_up={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":81)]}

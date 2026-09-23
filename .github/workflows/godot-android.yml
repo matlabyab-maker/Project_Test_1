@@ -1,0 +1,25 @@
+name: Build Godot Android Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Android ARM64
+        uses: mlm-games/godot-build-action@v1
+        with:
+          EXPORT_PRESET_NAME: "Android arm64"
+          GODOT_VER: "4.3.0-stable"
+          PROJECT_DIR: "."
+          EXPORT_DIR: "build"
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: SnowMountain1942-Demo-APK
+          path: build/**/*.apk
